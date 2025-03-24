@@ -1,0 +1,511 @@
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git init
+Initialized empty Git repository in C:/Users/monica/Desktop/Egs/GitEgs111/.git/
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add .
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Initial commit from TFS"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global user.name "Monica Gupta"  
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global user.email  "gupta.monicag@gmail.com"  
+ 1 file changed, 2 insertions(+)
+error: failed to push some refs to 'https://github.com/monicag-gupta/gitAristrocat'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git remote add origin https://github.com/monicag-gupta/gitAristrocat.git
+error: remote origin already exists.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git remote remove origin
+
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Initial commit from TFS"
+On branch master
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+error: src refspec main does not match any
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add --all
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Initial commit from TFS"
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/monicag-gupta/gitAristrocat.git'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin HEAD:main
+info: please complete authentication in your browser...
+ ! [rejected]        HEAD -> main (fetch first)
+error: failed to push some refs to 'https://github.com/monicag-gupta/gitAristrocat.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin HEAD:main
+ ! [rejected]        HEAD -> main (fetch first)
+error: failed to push some refs to 'https://github.com/monicag-gupta/gitAristrocat.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 852 bytes | 1024 bytes/s, done.
+From https://github.com/monicag-gupta/gitAristrocat
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+    git pull <remote> <branch>
+
+
+    git branch --set-upstream-to=origin/<branch> master
+
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add --all
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Initial commit from TFS"
+On branch master
+nothing to commit, working tree clean
+To https://github.com/monicag-gupta/gitAristrocat.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/monicag-gupta/gitAristrocat.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you want to integrate the remote changes, use 'git pull'
+hint: before pushing again.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin --force HEAD:main
+Enumerating objects: 3, done.
+Writing objects: 100% (3/3), 258 bytes | 2.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/monicag-gupta/gitAristrocat.git
+ + 191bdab...28bf916 HEAD -> main (forced update)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git status
+nothing to commit, working tree clean
+Date:   Sat Mar 22 22:07:45 2025 +0530
+
+    Initial commit from TFS
+Switched to a new branch 'feature-login'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "New feature" >> feature.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add feature.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Add login feature"
+[feature-login 7146bb0] Add login feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin feature-login
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote:
+To https://github.com/monicag-gupta/gitAristrocat.git
+ * [new branch]      feature-login -> feature-login
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+Updating 28bf916..7146bb0
+ feature.txt | Bin 0 -> 28 bytes
+ create mode 100644 feature.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git branch -d feature-login
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b feature/new-ui develop
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout develop
+error: pathspec 'develop' did not match any file(s) known to git
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git branch --list
+* main
+  master
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b develop main
+Switched to a new branch 'develop'
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/monicag-gupta/gitAristrocat/pull/new/develop
+To https://github.com/monicag-gupta/gitAristrocat.git
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b feature/new-ui develop
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "New UI implementation"
+nothing to commit, working tree clean
+Switched to branch 'develop'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge feature/new-ui
+Already up to date.
+Deleted branch feature/new-ui (was 7146bb0).
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Your branch is ahead of 'origin/main' by 1 commit.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge release/v1.0
+Already up to date.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git tag -a v1.0 -m "Release v1.0"
+Switched to branch 'develop'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge main
+Already up to date.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 900 bytes | 12.00 KiB/s, done.
+From https://github.com/monicag-gupta/gitAristrocat
+ * branch            main       -> FETCH_HEAD
+Updating 7146bb0..f7dc4b2
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "Added validation to login"
+
+nothing to commit, working tree clean
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+Everything up-to-date
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b feature-login
+Switched to a new branch 'feature-login'
+On branch feature-login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "Added login feature"
+[feature-login 13da8de] Added login feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 login.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Your branch is up to date with 'origin/main'.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge feature-login
+Updating f7dc4b2..13da8de
+Fast-forward
+ login.js | Bin 0 -> 32 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 login.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (3/3), 350 bytes | 87.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/monicag-gupta/gitAristrocat.git
+   f7dc4b2..13da8de  main -> main
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b feature-relogin
+Switched to a new branch 'feature-relogin'
+On branch feature-relogin
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "Added Rebased login feature"
+[feature-relogin e60829b] Added Rebased login feature
+ create mode 100644 relogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "Added Rebased login feature"
+On branch feature-relogin
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Switched to branch 'main'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git pull origin main
+From https://github.com/monicag-gupta/gitAristrocat
+Already up to date.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout feature-relogin
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git rebase main
+>>
+Current branch feature-relogin is up to date.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+>>
+Your branch is up to date with 'origin/main'.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge feature-relogin
+Updating 13da8de..e60829b
+Fast-forward
+ relogin.js | Bin 0 -> 54 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 relogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+Enumerating objects: 4, done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 7.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/monicag-gupta/gitAristrocat.git
+   13da8de..e60829b  main -> main
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log
+commit e60829be0561aeb1429b357b26b56fd8249c2ee1 (HEAD -> main, origin/main, origin/HEAD, feature-relogin)
+commit e60829be0561aeb1429b357b26b56fd8249c2ee1 (HEAD -> main, origin/main, origin/HEAD, feature-relogin)
+Author: Monica Gupta <gupta.monicag@gmail.com>
+Date:   Sun Mar 23 18:07:55 2025 +0530
+
+    Added Rebased login feature
+
+commit 13da8de890bf4446b8b20849c3e7ad5d64802bd6 (feature-login)
+Author: Monica Gupta <gupta.monicag@gmail.com>
+Date:   Sun Mar 23 14:47:50 2025 +0530
+
+    Added login feature
+
+commit f7dc4b29844c88647b9532358ea614225a4f13f9
+Merge: 28bf916 7146bb0
+Author: monicag-gupta <86832090+monicag-gupta@users.noreply.github.com>
+Date:   Sun Mar 23 13:51:17 2025 +0530
+
+    Merge pull request #1 from monicag-gupta/feature-login
+
+    Login feature
+
+commit 7146bb09023849aea0a35aca57ae8de7f64a179e (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop)
+Author: Monica Gupta <gupta.monicag@gmail.com>
+Date:   Sun Mar 23 13:24:43 2025 +0530
+
+
+    Initial commit from TFS
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log >>aa.txt    
+Switched to a new branch 'feature-Mergedlogin'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "Login feature" >> mergelogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -am "Added merged login feature"
+[feature-Mergedlogin c0fb831] Added merged login feature
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergelogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Updating e60829b..c0fb831
+Fast-forward
+ mergelogin.js | Bin 0 -> 32 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergelogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log >> aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log >> aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline --graph --decorate --all
+*   f7dc4b2 Merge pull request #1 from monicag-gupta/feature-login
+|/
+* 28bf916 (master) Initial commit from TFS
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline --graph --decorate --all >> aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge --no-ff feature-Mergedlogin
+Already up to date.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline --graph --decorate --all >> aa.txt
+  feature-Mergedlogin
+* main
+  master
+  release/v1.0
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --graph --oneline --decorate --all --branches > aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge --no-ff feature-Mergedlogin -m "Merge branch 'feature-branch'"
+
+Merge made by the 'ort' strategy.
+ mergelogin.js | Bin 0 -> 32 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 mergelogin.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --graph --oneline --decorate --all --branches > aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push origin main
+Enumerating objects: 4, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/monicag-gupta/gitAristrocat.git
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+[main ca5935c] Initial commit with app.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b feature-branch
+Switched to a new branch 'feature-branch'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo 'console.log("Hello from feature branch");' > app.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo 'console.log("Hello from main branch - modified");' > app.js       
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add app.js
+[main 8cc556c] Updated app.js in main
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git merge feature-branch
+warning: Cannot merge binary files: app.js (HEAD vs. feature-branch)
+Auto-merging app.js
+CONFLICT (content): Merge conflict in app.js
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   app.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aa.txt
+
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add app.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Resolved merge conflict in app.js"
+On branch main
+  (use "git add <file>..." to include in what will be committed)
+        aa.txt
+
+[main 1c8db63] Resolved merge conflict in app.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline --graph --all > aa.txt
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Initial commit with feature.js"
+[main 3da085f] Initial commit with feature.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.js
+[main 3da085f] Initial commit with feature.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.js
+ create mode 100644 feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Updated feature')" > feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit --amend
+[main c22d664] Initial commit with feature.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global core.editor "code --wait"
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit --amend
+[main 1074c7c] Initial commit with feature.js
+ Date: Sun Mar 23 22:27:20 2025 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push --force
+Counting objects: 100% (19/19), done.
+Delta compression using up to 2 threads
+remote: Resolving deltas: 100% (9/9), done.
+To https://github.com/monicag-gupta/gitAristrocat.git
+error: Please commit or stash them.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Commit 1');" > feature.js
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Commit 2');" >> feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Commit 2"
+[main a9f9106] Commit 2
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Commit 3');" >> feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add feature.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Commit 3"
+[main dca525f] Commit 3
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git rebase -i HEAD~3
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git status
+On branch main
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   aa.txt
+no changes added to commit (use "git add" and/or "git commit -a")
+Saved working directory and index state WIP on main: dca525f Commit 3
+[detached HEAD 1888625] Commit 1
+ Date: Sun Mar 23 23:24:23 2025 +0530
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git rebase -continue
+fatal: invalid upstream '–continue'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git rebase --continue
+fatal: no rebase in progress
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git stash pop
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   aa.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (510007b21926f07f9108e6db4a4018b9ad53a740)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push --force
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 557 bytes | 22.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/monicag-gupta/gitAristrocat.git
+   1074c7c..ec94997  main -> main
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git reflog
+ec94997 (HEAD -> main, origin/main, origin/HEAD) HEAD@{0}: rebase (finish): returning to refs/heads/main
+ec94997 (HEAD -> main, origin/main, origin/HEAD) HEAD@{1}: rebase (pick): Commit 3
+1888625 HEAD@{2}: rebase (squash): Commit 1
+e8086b3 HEAD@{3}: rebase (start): checkout HEAD~3
+dca525f HEAD@{4}: reset: moving to HEAD
+dca525f HEAD@{5}: commit: Commit 3
+a9f9106 HEAD@{6}: commit: Commit 2
+e8086b3 HEAD@{7}: commit: Commit 1
+1074c7c HEAD@{8}: commit (amend): Initial commit with feature.js
+c22d664 HEAD@{9}: commit (amend): Initial commit with feature.js
+3da085f HEAD@{10}: commit: Initial commit with feature.js
+1c8db63 HEAD@{11}: commit: Resolved merge conflict in app.js
+0afc1d0 HEAD@{12}: commit (merge): Merge branch 'feature-branch'
+8cc556c HEAD@{13}: commit: Updated app.js in main
+ca5935c HEAD@{14}: checkout: moving from feature-branch to main
+8d1048a (feature-branch) HEAD@{15}: commit: Updated app.js in feature-branch
+ca5935c HEAD@{16}: checkout: moving from main to feature-branch
+ca5935c HEAD@{17}: commit: Initial commit with app.js
+9957b7d HEAD@{18}: merge feature-Mergedlogin: Merge made by the 'ort' strategy.
+e60829b (feature-relogin) HEAD@{19}: reset: moving to HEAD~1
+c0fb831 (feature-Mergedlogin) HEAD@{20}: merge feature-Mergedlogin: Fast-forward
+e60829b (feature-relogin) HEAD@{21}: checkout: moving from feature-Mergedlogin to main
+c0fb831 (feature-Mergedlogin) HEAD@{22}: commit: Added merged login feature
+e60829b (feature-relogin) HEAD@{23}: checkout: moving from main to feature-Mergedlogin
+e60829b (feature-relogin) HEAD@{24}: merge feature-relogin: Fast-forward
+13da8de (feature-login) HEAD@{25}: checkout: moving from feature-relogin to main
+e60829b (feature-relogin) HEAD@{26}: checkout: moving from main to feature-relogin
+13da8de (feature-login) HEAD@{27}: checkout: moving from feature-relogin to main
+e60829b (feature-relogin) HEAD@{28}: commit: Added Rebased login feature
+13da8de (feature-login) HEAD@{29}: checkout: moving from main to feature-relogin
+13da8de (feature-login) HEAD@{30}: merge feature-login: Fast-forward
+f7dc4b2 HEAD@{31}: checkout: moving from feature-login to main
+13da8de (feature-login) HEAD@{32}: commit: Added login feature
+f7dc4b2 HEAD@{33}: checkout: moving from main to feature-login
+f7dc4b2 HEAD@{34}: pull origin main: Fast-forward
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{35}: checkout: moving from 
+develop to main
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{36}: checkout: moving from 
+main to develop
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{37}: checkout: moving from 
+release/v1.0 to main
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{38}: checkout: moving from 
+develop to release/v1.0
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{39}: checkout: moving from 
+feature/new-ui to develop
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{40}: checkout: moving from 
+develop to feature/new-ui
+ast-forward
+28bf916 (master) HEAD@{43}: checkout: moving from feature-login to main
+7146bb0 (tag: v1.0, origin/feature-login, origin/develop, release/v1.0, develop) HEAD@{44}: commit: Add login featPS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Initial commit');" > feature1.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add feature1.js
+ create mode 100644 feature1.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Second commit');" >> feature1.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Second commit"
+[main 631218a] Second commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> echo "console.log('Third commit');" >> feature1.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git add feature1.js
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git commit -m "Third commit"
+[main 3024c8a] Third commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline
+631218a Second commit
+ec94997 (origin/main, origin/HEAD) Commit 3
+1888625 Commit 1
+1074c7c Initial commit with feature.js
+1c8db63 Resolved merge conflict in app.js
+0afc1d0 Merge branch 'feature-branch'
+8cc556c Updated app.js in main
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git reset --hard HEAD~1
+HEAD is now at 631218a Second commit
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline
+8a9a2ce Initial commit
+ec94997 (origin/main, origin/HEAD) Commit 3
+1888625 Commit 1
+1074c7c Initial commit with feature.js
+1c8db63 Resolved merge conflict in app.js
+0afc1d0 Merge branch 'feature-branch'
+8cc556c Updated app.js in main
+8d1048a (feature-branch) Updated app.js in feature-branch
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git reflog
+631218a (HEAD -> main) HEAD@{0}: reset: moving to HEAD~1
+631218a (HEAD -> main) HEAD@{2}: commit: Second commit
+ec94997 (origin/main, origin/HEAD) HEAD@{4}: rebase (finish): returning to refs/heads/main
+1888625 HEAD@{6}: rebase (squash): Commit 1
+e8086b3 HEAD@{7}: rebase (start): checkout HEAD~3
+dca525f HEAD@{8}: reset: moving to HEAD
+dca525f HEAD@{9}: commit: Commit 3
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git reset --hard 3024c8a
+>>
+HEAD is now at 3024c8a Third commit
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git log --oneline
+3024c8a (HEAD -> main) Third commit
+631218a Second commit
+8a9a2ce Initial commit
+ec94997 (origin/main, origin/HEAD) Commit 3
+1888625 Commit 1
+1074c7c Initial commit with feature.js
+1c8db63 Resolved merge conflict in app.js
+0afc1d0 Merge branch 'feature-branch'
+8cc556c Updated app.js in main
+PS C:\Users\monica\Desktop\Egs\GitEgs111> 
