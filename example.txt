@@ -1,2 +1,4 @@
 Line 1: Initial content
 Line 2: Stable version
+Line 3: First change
+Line 4: Second change
