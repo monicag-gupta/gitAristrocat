@@ -509,3 +509,130 @@ ec94997 (origin/main, origin/HEAD) Commit 3
 0afc1d0 Merge branch 'feature-branch'
 8cc556c Updated app.js in main
 PS C:\Users\monica\Desktop\Egs\GitEgs111> 
+
+
+
+
+
+
+
+
+Delta compression using up to 2 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 927 bytes | 185.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+To https://github.com/monicag-gupta/gitAristrocat.git
+ * [new tag]         v2.0 -> v2.0
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push --tags
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/monicag-gupta/gitAristrocat.git
+ * [new tag]         v1.0 -> v1.0
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git tag -d v1.0
+Deleted tag 'v1.0' (was 755baae)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git push --delete origin v1.0
+To https://github.com/monicag-gupta/gitAristrocat.git
+ - [deleted]         v1.0
+Note: switching to 'v2.0'.
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 755baae Update to Version 3
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git checkout -b release-2.0 v2.0
+Switched to a new branch 'release-2.0'
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.co checkout
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.br branch
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.ci commit
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.st status
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git co main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git br        
+  bugfix-branch
+  develop
+  feature-Mergedlogin
+  feature-branch
+  feature-login
+  feature-relogin
+  git-tag-demo
+* main
+  master
+  new-feature-branch
+  release-2.0
+  release/v1.0
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git ci -m "Updated code"  
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git hist      
+* 9eb8339 Update to Version 2
+* f3ee49f (origin/feature-branch, feature-branch) Added Feature 2
+* a0547e7 Added Feature 1
+* adfa7e4 (HEAD -> main) Updated main branch
+* a472f86 (origin/main, origin/HEAD) Fixed a critical bug
+| * eae42a4 (bugfix-branch) Fixed a critical bug
+| * 1e257cf Added New Feature B
+| * ae60826 Added New Feature A
+| * 14540aa (new-feature-branch) Initial commit with tracked1.txt and .gitignore
+|/
+* 449394e Initial commit with myfile.txt
+* 2f131e6 Initial commit with example.txt
+* 642454a Initial commit
+* 7ed9d4e Force Git to treat .txt files as text
+* 19502bb Initial commit with example.txt
+* 746f33d Initial commit
+PS C:\Users\monica\Desktop\Egs\GitEgs111>
+grep : The term 'grep' is not recognized as the name of a cmdlet, function, script file, or operable program.     
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:30
++ git config --global --list | grep alias
++                              ~~~~
+    + CategoryInfo          : ObjectNotFound: (grep:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global --list | Select-String "alias"
+
+alias.co=checkout
+alias.br=branch
+alias.ci=commit
+alias.st=status
+alias.hist=log --oneline --graph --all
+
+
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global --unset alias.hist
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global --list | Select-String "alias"
+
+alias.ci=commit
+alias.st=status
+
+[user]
+        name = Monica Gupta
+        email = gupta.monicag@gmail.com
+[core]
+        editor = code --wait
+        autocrlf = false
+        whitespace = -trailing-space
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.delbr "!git branch -d"
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git delbr feature-branch
+error: the branch 'feature-branch' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D feature-branch'
+hint: Disable this message with "git config set advice.forceDeleteBranch false"
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git config --global alias.undo "reset --soft HEAD~1"
+PS C:\Users\monica\Desktop\Egs\GitEgs111> git undo
+PS C:\Users\monica\Desktop\Egs\GitEgs111> 
+ *  History restored 
+
+PS C:\Users\monica\Desktop\Egs\GitEgs111> 
