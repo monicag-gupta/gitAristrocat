@@ -25,7 +25,7 @@ export default defineConfig([
     rules: {
       //"no-console": "error",
       "semi": ["error", "always"],
-      "quotes": ["error", "double"]
+      //"quotes": ["error", "double"]
     },
     extends: [js.configs.recommended] // Correct way to extend rules
   }
