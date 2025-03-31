@@ -1,2 +1,4 @@
 Hello, Git Patches!
 This is an updated line in example4patch.txt.
+Hello, Git Patches!
+This is an updated line in example4patch.txt.

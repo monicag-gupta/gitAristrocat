@@ -1,0 +1,21 @@
+From 67177b552b9d2353569d37495e777d6117b75cc5 Mon Sep 17 00:00:00 2001
+From: Monica Gupta <gupta.monicag@gmail.com>
+Date: Wed, 26 Mar 2025 16:49:09 +0530
+Subject: [PATCH] Updated example4patch.txt with a new line
+
+---
+ example4patch.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/example4patch.txt b/example4patch.txt
+index eaa3c63..3b8d834 100644
+--- a/example4patch.txt
++++ b/example4patch.txt
+@@ -1 +1,2 @@
+-Hello, Git Patches!
+\ No newline at end of file
++Hello, Git Patches!
++This is an updated line in example4patch.txt.
+-- 
+2.49.0.windows.1
+

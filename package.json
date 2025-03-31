@@ -1,0 +1,28 @@
+{
+  "name": "gitegs111",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "prepare": "husky",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monicag-gupta/gitAristrocat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monicag-gupta/gitAristrocat/issues"
+  },
+  "homepage": "https://github.com/monicag-gupta/gitAristrocat#readme",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0",
+    "husky": "^9.1.7"
+  }
+}
